@@ -1,0 +1,231 @@
+/* ===== BASIC RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+   background: url('https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?q=80&w=704&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+  
+
+}
+
+/* ===== LEFT NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+.navbar .home-btn {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.navbar .home-btn:hover {
+  background-color: #777;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.navbar .menu li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px;
+  display: block;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.navbar .menu li a:hover {
+  background-color: #555;
+  color: #ff0;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+/* ===== CENTERED LOGO ===== */
+header {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  text-align: center;
+}
+
+header .logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
+  color: #ff69b4;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+
+header .logo:hover {
+  color: #00ffff;
+  transform: scale(1.2);
+}
+
+/* ===== FULLSCREEN SLIDES ===== */
+.slide {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #545096;
+  padding: 40px;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.slide:target {
+  display: block;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+  background: #eee;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  background: #ccc;
+}
+
+/* ===== INTEREST LIST ===== */
+.interests-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.interests-list li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.interests-list li::before {
+  content: "💡";
+  position: absolute;
+  left: 0;
+}
+
+/* ===== PROJECT GRID ===== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #0b0f02;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.project-card h3 {
+  color: #5f4b8b;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #5f4b8b;
+  padding: 6px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.project-card a:hover {
+  background-color: #46336e;
+}
+
+/* ===== EDUCATION ===== */
+.education-steps {
+  list-style: none;
+  padding-left: 0;
+}
+
+.education-steps li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.education-steps li::before {
+  content: "🎓";
+  position: absolute;
+  left: 0;
+}
+
+/* ===== CONTACTS ===== */
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.contact-input, .contact-textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.send-btn {
+  padding: 10px;
+  border: none;
+  background-color: #555;
+  color: white;
+  border-radius: 5px;
+  cursor: not-allowed;
+}
